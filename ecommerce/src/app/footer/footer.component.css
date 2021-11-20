@@ -1,0 +1,46 @@
+.footerHolder
+{
+    width:100%;
+    margin:auto;
+    margin-top: 50px;
+    padding: 0px 50px;
+    
+}
+
+.text:hover
+{
+    color: green;
+}
+
+
+.footerTop
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.socialsHolder
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.icon
+{
+    text-decoration: none;
+}
+
+
+
+.socials
+{
+    margin-top: 20px;
+    margin:10px;
+    color: black;
+}
+
+.footerContainer
+{
+    background-color: rgb(144, 255, 153);
+}

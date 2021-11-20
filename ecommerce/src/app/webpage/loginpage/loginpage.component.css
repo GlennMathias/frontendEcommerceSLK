@@ -1,0 +1,37 @@
+.loginHolder
+{
+    width:300px;
+    background-color: rgb(186, 231, 171);
+    height: 350px;
+    border-radius: 20px;
+    padding: 25px;
+    align-items: center;
+}
+.sideImg
+{
+    height:200px;
+}
+
+.form-control
+{
+    width: 245px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.btn
+{
+    margin-top: 10px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+}
+
+.loginContainer
+{
+    /* padding: 5vh 75vh; */
+    background-color: rgb(198, 240, 185);
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

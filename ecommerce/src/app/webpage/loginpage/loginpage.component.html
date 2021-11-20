@@ -1,0 +1,17 @@
+
+
+<div class="loginContainer">
+    <!-- <img class="sideImg" src="../../../assets/extraImages/basketofitems.png" alt=""> -->
+    <div class="loginHolder">
+        <form>
+            <div><label>UserName</label><br/><input class="form-control me-2" type="text" [(ngModel)]="model.userName" name="username"></div>
+            <div><label>Password</label><br/><input class="form-control me-2" type="password" [(ngModel)]="model.password" name="password"></div>
+            <button class="btn btn-outline-success" type ="submit" (click)="loginUser()">Login</button>
+        </form>
+
+        <div style="padding-left:15px;"> 
+            Not a Customer yet? <a routerLink="/signUp">Sign Up</a>
+        </div>
+    </div>
+    <!-- <img class="sideImg" src="../../../assets/extraImages/basketofitems.png" alt=""> -->
+</div>

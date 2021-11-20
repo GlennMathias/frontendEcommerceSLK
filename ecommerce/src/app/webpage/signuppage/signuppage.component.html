@@ -1,0 +1,17 @@
+<h1 style="margin-left:45vw;">Signup</h1>
+<div class="signupFormHolder" >
+    <div class="signupForm">
+        <form > 
+            <label>Name</label> <input class="form-control" type="text" [(ngModel)]="model.custname" name="name"/>
+            <label>UserName</label> <input class="form-control" type="text" [(ngModel)]="model.custusername" name="userName"/>
+            <label>Email</label> <input class="form-control" placeholder="example@email.com" type="text" [(ngModel)]="model.custemail" name="email"/>
+            <label>Ph No</label> <input class="form-control" type="text" [(ngModel)]="model.custphone" name="phone"/>
+            <label>Address</label> <input class="form-control" type="text" [(ngModel)]="model.custaddress" name="address"/>
+            <label>Password</label> <input type="password" id="defaultSubscriptionFormEmail " class="form-control " [(ngModel)]="model.custpassword " name="password" >
+            <label>Confirm Password</label> <input type="password" id="defaultSubscriptionFormEmail " class="form-control "  [(ngModel)]="model.custconfpassword " name="confpassword ">
+            <button value="submit " type=" button "  style="margin: auto;" class="btn btn-success " (click)="signup()">Submit</button>
+        </form>
+        Already a User? <a routerLink="/login">Login</a>
+    </div>
+
+</div>

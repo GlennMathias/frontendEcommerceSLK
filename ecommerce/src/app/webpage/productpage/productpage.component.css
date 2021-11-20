@@ -1,0 +1,27 @@
+.prodDisplay
+{
+     display: grid;
+     grid-template-columns: auto auto auto auto;
+     
+}
+
+.prodImg
+{
+    border-radius: 5px;
+}
+
+.prodHolder
+{
+    width:200px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid rgb(106, 187, 74);
+    margin:3px;
+}
+.prodHolder:hover
+{
+    background-color: rgb(156, 241, 122);
+}

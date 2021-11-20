@@ -1,0 +1,25 @@
+<div *ngIf="actId != -1; else pleaseLogin" >
+<h1>Welcome Back {{user.custname}}</h1>
+<form >
+<label for="name">Name</label><input id="name" type="text" value="{{user.custname}}" [(ngModel)]="user.custname" name="name"><br>
+<label for="username">User Name</label><input id="username" type="text" value="{{user.custusername}}" [(ngModel)]="user.custusername" name="userName"><br>
+<label for="password">Password</label><input id="password" type="password" value="" name="password"><br>
+<label for="confpassword">Confirm Password</label><input id="confpassword" type="password" name="confPassword"><br>
+<label for="address">Address</label><input id="address" type="text" value="{{user.custaddress}}" [(ngModel)]="user.custaddress" name="address"><br>
+<label for="email">Email</label><input id="email" type="email" value="{{user.custemail}}" [(ngModel)]="user.custemail" name="email"><br>
+
+<button type="submit" (click)="updateDetails()">Update Details</button>
+<button type="reset">Reset Changes</button>
+</form>
+Live Display<br>
+{{user.custname}}<br>
+{{user.custusername}}<br>
+{{user.custemail}}<br>
+{{user.custaddress}}<br>
+
+
+</div>
+
+<ng-template #pleaseLogin>
+    Please Login <a routerLink="/login">Here</a>
+</ng-template>

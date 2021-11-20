@@ -1,0 +1,24 @@
+.listHolder
+{
+    background-color: rgb(193, 241, 191);
+    padding: 10px;
+    min-width: 80vw;
+    
+    /* background-color: rgb(9, 255, 0); */
+}
+
+.cartList
+{
+    display: flex;
+    min-height: 100px;
+    background-color: rgb(203, 248, 192);
+    margin:10px 0px;
+    padding: 10px 100px;
+    width:1320px;
+    justify-content: space-between;
+}
+
+.listCarrier
+{
+    min-height: 70vh;
+}

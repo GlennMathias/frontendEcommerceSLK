@@ -1,0 +1,22 @@
+
+<h1 style="text-align: center;">Cart</h1>
+<div class="listHolder">
+    <div class="listCarrier">
+        <div *ngFor="let cartItem of cartItems | async " >
+            <div class="cartList">
+                <div>{{cartItem.prod.proName}}</div>
+                <div>
+                    <span class="price">{{cartItem.price}}</span>
+                    {{cartItem.prod.proId}}
+                </div>
+                <div><button (click)="removeFromCart(cartItem.prod.proId)">Remove</button></div>
+            </div>
+        </div>
+    </div>
+
+    <div align="right" style="padding-right:50px">
+        <h1>Total: Rs.<span  id="total" style="font-size: 50px;" >{{total}}</span></h1>
+       <a routerLink="/thanks"> <button type="button" class="btn btn-success">Purchase</button></a>
+    </div>
+</div>
+

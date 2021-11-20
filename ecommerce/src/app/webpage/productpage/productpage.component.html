@@ -1,0 +1,13 @@
+<h1 style="color: green;">Products</h1><h3><div>{{basketCount}}</div></h3>
+<div class="prodDisplay" >
+    <div *ngFor = "let prod of products|async" class="prodHolder">
+        <div >
+            <img class="prodImg" src="{{prod.prodImg}}"  align="center">
+            <div><h3>{{prod.proName}}</h3></div>
+            <div>Rs. {{prod.proPrice}}</div>
+            <div>{{prod.proDes}}</div>
+             <div><input type="number" min=0 [(ngModel)]="qty[prod.proId]" (change)="getCart()"/></div>
+            <button type="button" class="btn btn-success" (click)="addToCart(prod.proId,qty[prod.proId])">Add to Cart</button>
+        </div>
+    </div>
+</div>
