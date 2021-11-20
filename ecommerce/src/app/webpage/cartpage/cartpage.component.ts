@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { Cart } from './cart';
 import { Product } from '../product';
 import { ProductService } from 'src/app/product.service';
+import { CustomerService } from 'src/app/customer.service';
 
 
 
@@ -57,7 +58,17 @@ export class CartpageComponent implements OnInit {
   removeFromCart(prodid)
   {
     console.log("ts function says"+ prodid);
-    this.cartService.removeFromCart(prodid)
+    this.cartService.removeFromCart(prodid).subscribe(
+      (data)=>{this.getTotal();
+        this.getOrders();}
+    )
+  }
+
+  logout()
+  {
+    this.cartService.clearCart();
+    CustomerService.setActiveId(-1);
+    OrderdetailsService.currentOrderId=0;
   }
 
 }

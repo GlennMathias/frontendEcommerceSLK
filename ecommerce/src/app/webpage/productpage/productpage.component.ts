@@ -33,9 +33,9 @@ export class ProductpageComponent implements OnInit {
   addToCart(prodId,qty)
   {
     console.log(prodId,qty);
-    if(qty>0)
+    if(qty>0 && OrderdetailsService.currentOrderId != (undefined || 0) )
       {
-        this.orderDetails.addToCartService(prodId,qty);
+        this.orderDetails.addToCartService(prodId,qty).subscribe((data)=>{console.log(data)},(error)=>{console.log(error)});
       }
       else
       {
@@ -47,6 +47,7 @@ export class ProductpageComponent implements OnInit {
   {
     this.orderDetails.getCart().subscribe(
     (cart)=>{this.cart=cart;
+      this.basketCount=this.cart.length;
       console.log("Hello Cart");
     console.log(this.cart);
     let item;
@@ -54,9 +55,8 @@ export class ProductpageComponent implements OnInit {
     {
       item=this.cart[prods]
       console.log(this.qty[item.prodid]=item.qty);
-      //ordid: 87, prodid: 1, qty: 6
     }
-    this.basketCount=this.cart.length;
+    
   }
     
     )

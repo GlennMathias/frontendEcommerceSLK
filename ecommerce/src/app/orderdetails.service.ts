@@ -18,11 +18,11 @@ export class OrderdetailsService {
     return this.http.get(`${this.baseUrl+"viewCart/"+OrderdetailsService.currentOrderId}`);
   }
 
-  addToCartService(prodId,qty)
+  addToCartService(prodId,qty):Observable<any>
   {
     console.log(`${this.baseUrl+"addCart/"+OrderdetailsService.currentOrderId+"/"+prodId+"/"+qty}`);
     
-    this.http.get(`${this.baseUrl+"addCart/"+OrderdetailsService.currentOrderId+"/"+prodId+"/"+qty}`).subscribe((data)=>{console.log(data)},(error)=>{console.log(error)});
+    return this.http.get(`${this.baseUrl+"addCart/"+OrderdetailsService.currentOrderId+"/"+prodId+"/"+qty}`);
   }
 
   createOrder()
@@ -44,6 +44,12 @@ export class OrderdetailsService {
     console.log(`${this.baseUrl}getTotal/${OrderdetailsService.currentOrderId}`);
     return  this.http.get(`${this.baseUrl}getTotal/${OrderdetailsService.currentOrderId}`);
       
+  }
+
+  clearCart()
+  {
+    console.log(`${this.baseUrl}/remove`)
+    return this.http.delete(`${this.baseUrl}/remove`);
   }
 
 }

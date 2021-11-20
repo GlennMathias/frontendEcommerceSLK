@@ -6,8 +6,8 @@
             <div><h3>{{prod.proName}}</h3></div>
             <div>Rs. {{prod.proPrice}}</div>
             <div>{{prod.proDes}}</div>
-             <div><input type="number" min=0 [(ngModel)]="qty[prod.proId]" (change)="getCart()"/></div>
-            <button type="button" class="btn btn-success" (click)="addToCart(prod.proId,qty[prod.proId])">Add to Cart</button>
+             <div><input type="number" min=0 [(ngModel)]="qty[prod.proId]" (focus)="addToCart(prod.proId,qty[prod.proId]);getCart();" (blur)="addToCart(prod.proId,qty[prod.proId]);getCart();"/></div>
+            <button type="button" class="btn btn-success" (click)="addToCart(prod.proId,qty[prod.proId]);getCart()">Add to Cart</button>
         </div>
     </div>
 </div>
