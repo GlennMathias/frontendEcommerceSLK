@@ -34,7 +34,8 @@ export class ProfilepageComponent implements OnInit {
 
   updateDetails()
   {
-    this.customerService.updateUserDetails(this.user);
+    this.customerService.updateUserDetails(this.user).subscribe(
+      (result:boolean)=>{console.log(result);},(error)=>{console.log(error);});
     console.log("Update Details")
     console.log(this.user)
     if (this.user.custpassword == this.passConfirm)

@@ -33,7 +33,7 @@ export class CustomerService {
   updateUserDetails(userData)
   {
     console.log(`${this.baseUrl}/updateProfile/${CustomerService.getActiveId()}`)
-    return this.http.put(`${this.baseUrl}/updateCustomerDetails/${CustomerService.getActiveId()}`,userData);
+    return this.http.put(`${this.baseUrl}/updateProfile/${CustomerService.getActiveId()}`,userData);
   }
 
   changePassword()
